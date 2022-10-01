@@ -5,14 +5,8 @@ var outputText = document.querySelector("#outputTextContainer");
 
 var sumOfNo = 0;
 
-function checkNoBtnHandler(){
-    console.log(inpDate.value);
-    var inpLuckyNo = Number(luckyNo.value);
-    console.log("inpLuckyNo : ", inpLuckyNo+" typeof inpLuckyNo: "+typeof inpLuckyNo);
-    var dateString = inpDate.value;
-    const noString = dateString.replaceAll("-","");
-    console.log(typeof noString);
-
+function calculateDateSum(noString, inpLuckyNo)
+{
     for(let i in noString)
     {
         var no = Number(noString.charAt(i));
@@ -29,7 +23,25 @@ function checkNoBtnHandler(){
     else{
         outputText.innerText = "Your Birthday is not Lucky!";
     }
-    
+}
+
+function checkNoBtnHandler(){
+    console.log(inpDate.value);
+    var inpLuckyNo = Number(luckyNo.value);
+    console.log("inpLuckyNo : ", inpLuckyNo+" typeof inpLuckyNo: "+typeof inpLuckyNo);
+    var dateString = inpDate.value;
+    var noString = dateString.replaceAll("-","");
+    console.log(typeof noString);
+
+    if(dateString && inpLuckyNo)
+    {
+        calculateDateSum(noString, inpLuckyNo);
+    }
+    else
+    {
+        outputText.innerText = "Please enter value in both fields!";
+    }
+
 }
 
 checkNoBtn.addEventListener("click", checkNoBtnHandler);

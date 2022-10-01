@@ -8,14 +8,33 @@
     <link href="/style.css" rel="stylesheet">
 </head>
 <body>
+    <p id="description" style="padding: 1rem;">
+       <marquee>Is Your Birthday Lucky?🤔</marquee> 
+    </p>
     <div class="container">
-        <label for="date-input">Enter Your Date of Birth : </label>
+        <label for="date-input" id="DateInput" class="label-for-inputs">Enter Your Date of Birth : </label>
         <input type="date" name="birthday" id = "date-input" class="input-types"> 
-        <label for="inp-lucky-no">Enter your lucky number: </label>
+        <label for="inp-lucky-no" class="label-for-inputs">Enter your lucky number: </label>
         <input type="number" id="inp-lucky-no" class="input-types">
         <button id="lucky-no-btn">Check Number</button>
         <p id="outputTextContainer"></p>
     </div>
+    <footer id="footer">
+       <div id="footer-contents">
+        <div>© | 2022 | Maueeza Bhatkar</div>
+        <ul class="list-non-bullets">
+            <li>
+                <a href="https://github.com/maueeza"><img src="/icons8-github.svg"></a>
+            </li>
+            <li>
+                <a href="https://discord.com//msmomo#9764"><img src="/icons8-discord.svg"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/maueeza-bhatkar-6277a4191/"><img src="/icons8-linkedin-circled.svg"></a>
+            </li>
+        </ul>
+    </div>  
+    </footer>
 </body>
 <script src="/functionality_mark11.js" type="text/javascript"></script>
 </html>
